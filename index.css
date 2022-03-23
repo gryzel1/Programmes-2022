@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Marianne";
+  src: url("/fonts/Marianne-ExtraBold.otf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.title {
+  font-family: "Marianne" !important;
+}
+
+.navbar {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.img {
+  transition: transform 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.img:hover {
+  transform: scale(1.1);
+}
+
+.img-container {
+  width: 90%;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.thumbnail {
+  -webkit-filter: drop-shadow(0px 0px 2px #222);
+  filter: drop-shadow(0px 0px 2px #222);
+  transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+#nav-text {
+  margin-left: 10px;
+  margin-top: 12px;
+  font-size: 20px;
+}
+#nav-flag {
+  height: 14px;
+  margin-top: 18px;
+  margin-left: 10px;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+.categories {
+  margin-top: 30px;
+}
+
+.columns {
+  margin-top: -40px !important;
+}
+
+.first-columns {
+  margin-top: -25px !important;
+}
+
+.theme {
+  transition: transform 0.2s;
+}
+
+.theme:hover {
+  transform: scale(1.1);
+}
