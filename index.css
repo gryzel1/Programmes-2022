@@ -56,10 +56,11 @@ html {
 }
 
 h2 {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
   font-style: italic;
   text-align: center;
+  font-family: "Marianne";
 }
 
 .categories {
@@ -79,5 +80,25 @@ h2 {
 }
 
 .theme:hover {
+  transform: scale(1.1);
+}
+
+.french-button {
+  background-color: #002395;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  border: hidden;
+  font-family: "Marianne";
+  display: block;
+  margin: auto;
+  transition: transform 0.2s;
+}
+
+.french-button:hover {
+  background-color: #ed2939;
   transform: scale(1.1);
 }
