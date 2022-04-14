@@ -1,0 +1,555 @@
+@font-face {
+  font-family: "MarianneTitle";
+  src: url("fonts/Marianne-ExtraBold.otf");
+}
+
+@font-face {
+  font-family: "MarianneText";
+  src: url("fonts/Marianne-Medium.otf");
+}
+
+body {
+  font-family: "MarianneText";
+}
+
+.mesure {
+  background-color: white;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 0.2s, background-color 0.2s ease-in;
+  border-radius: 15px;
+}
+
+.mesure:hover {
+  transform: scale(1.5);
+}
+
+.mesure-titre {
+  font-size: 14px;
+  padding-top: 10px;
+  padding-left: 45px;
+  padding-right: 10px;
+  font-family: "MarianneTitle";
+}
+
+.separateur {
+  height: 5px;
+  width: 30%;
+  margin-top: 15px;
+}
+
+.mesure:hover .separateur {
+  background-color: white;
+  width: 100%;
+  border-radius: 0;
+}
+
+.separateur-selected {
+  background-color: white !important;
+  width: 100%;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.5s;
+}
+
+.categorie {
+  background-color: white;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 0.2s, background-color 0.2s ease-in;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.categorie:hover{
+  transform: scale(1.1);
+}
+
+.categorie-selected .separateur {
+  background-color: white;
+  width: 100%;
+  border-radius: 0;
+}
+
+.descriptif {
+  font-size: 11px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-top: 5px;
+}
+
+.img {
+  display: block;
+  margin: auto;
+  margin-top: 5px;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.securite {
+  color: #2e3192;
+}
+
+.securite:hover {
+  background-color: #2e3192;
+  color: white;
+}
+
+.categorie-securite {
+  color: #2e3192;
+}
+
+.categorie-securite-selected {
+  background-color: #2e3192;
+  color: white;
+}
+
+.securite-separateur {
+  background-color: #2e3192;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.5s;
+}
+
+.securite-icone {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #2e3192;
+  border-radius: 100%;
+}
+
+.economie {
+  color: #f15a24;
+}
+
+.economie:hover {
+  background-color: #f15a24;
+  color: white;
+}
+
+.categorie-economie {
+  color: #f15a24;
+}
+
+.categorie-economie-selected {
+  background-color: #f15a24;
+  color: white;
+}
+
+.economie-separateur {
+  background-color: #f15a24;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.5s;
+}
+
+.economie-icone {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #f15a24;
+  border-radius: 100%;
+}
+
+.ecologie {
+  color: #009245;
+}
+
+.ecologie:hover {
+  background-color: #009245;
+  color: white;
+}
+
+.categorie-ecologie {
+  color: #009245;
+}
+
+.categorie-ecologie-selected {
+  background-color: #009245;
+  color: white;
+}
+
+
+.ecologie-separateur {
+  background-color: #009245;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.5s;
+}
+
+.ecologie-icone {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #009245;
+  border-radius: 100%;
+}
+
+.education {
+  color: #42210b;
+}
+
+.education:hover {
+  background-color: #42210b;
+  color: white;
+}
+
+.categorie-education {
+  color: #42210b;
+}
+
+.categorie-education-selected {
+  background-color: #42210b;
+  color: white;
+}
+
+.education-separateur {
+  background-color: #42210b;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.5s;
+}
+
+.education-icone {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #42210b;
+  border-radius: 100%;
+}
+
+.justice {
+  color: #1b1464;
+}
+
+.justice:hover {
+  background-color: #1b1464;
+  color: white;
+}
+
+.categorie-justice {
+  color: #1b1464;
+}
+
+.categorie-justice-selected {
+  background-color: #1b1464;
+  color: white;
+}
+
+.justice-separateur {
+  background-color: #1b1464;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.5s;
+}
+
+.justice-icone {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #1b1464;
+  border-radius: 100%;
+}
+
+.international {
+  color: #0071bc;
+}
+
+.international:hover {
+  background-color: #0071bc;
+  color: white;
+}
+
+.categorie-international {
+  color: #0071bc;
+}
+
+.categorie-international-selected {
+  background-color: #0071bc;
+  color: white;
+}
+
+
+.international-separateur {
+  background-color: #0071bc;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.5s;
+}
+
+.international-icone {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #0071bc;
+  border-radius: 100%;
+}
+
+.sante {
+  color: #ed1e79;
+}
+
+.sante:hover {
+  background-color: #ed1e79;
+  color: white;
+}
+
+.categorie-sante {
+  color: #ed1e79;
+}
+
+.categorie-sante-selected {
+  background-color: #ed1e79;
+  color: white;
+}
+
+.sante-separateur {
+  background-color: #ed1e79;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.5s;
+}
+
+.sante-icone {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #ed1e79;
+  border-radius: 100%;
+}
+
+.culture {
+  color: #c1272d;
+}
+
+.culture:hover {
+  background-color: #c1272d;
+  color: white;
+}
+
+.categorie-culture {
+  color: #c1272d;
+}
+
+.categorie-culture-selected {
+  background-color: #c1272d;
+  color: white;
+}
+
+.culture-separateur {
+  background-color: #c1272d;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.5s;
+}
+
+.culture-icone {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #c1272d;
+  border-radius: 100%;
+}
+
+.administration {
+  color: #662d91;
+}
+
+.administration:hover {
+  background-color: #662d91;
+  color: white;
+}
+
+.categorie-administration {
+  color: #662d91;
+}
+
+.categorie-administration-selected {
+  background-color: #662d91;
+  color: white;
+}
+
+.administration-separateur {
+  background-color: #662d91;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.5s;
+}
+
+.administration-icone {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #662d91;
+  border-radius: 100%;
+}
+
+.solidarite {
+  color: #9e005d;
+}
+
+.solidarite:hover {
+  background-color: #9e005d;
+  color: white;
+}
+
+.categorie-solidarite {
+  color: #9e005d;
+}
+
+.categorie-solidarite-selected {
+  background-color: #9e005d;
+  color: white;
+}
+
+.solidarite-separateur {
+  background-color: #9e005d;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.5s;
+}
+
+.solidarite-icone {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #9e005d;
+  border-radius: 100%;
+}
+
+.energie {
+  color: #fbb03b;
+}
+
+.energie:hover {
+  background-color: #fbb03b;
+  color: white;
+}
+
+.categorie-energie {
+  color: #fbb03b;
+}
+
+.categorie-energie-selected {
+  background-color: #fbb03b;
+  color: white;
+}
+
+.energie-separateur {
+  background-color: #fbb03b;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.5s;
+}
+
+.energie-icone {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #fbb03b;
+  border-radius: 100%;
+}
+
+.logement {
+  color: #006837;
+}
+
+.logement:hover {
+  background-color: #006837;
+  color: white;
+}
+
+.categorie-logement {
+  color: #006837;
+}
+
+.categorie-logement-selected {
+  background-color: #006837;
+  color: white;
+}
+
+.logement-separateur {
+  background-color: #006837;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 0.5s;
+}
+
+.logement-icone {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #006837;
+  border-radius: 100%;
+}
+
+.title-cat{
+  font-size: 30px;
+  color: white;
+  font-family: "MarianneTitle";
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.hidden{
+  display: none;
+}
+
+.french-button {
+  background-color: #002395;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  border: hidden;
+  font-family: "Marianne";
+  display: block;
+  margin: auto;
+  transition: transform 0.2s;
+}
+
+.french-button:hover {
+  background-color: #ed2939;
+  transform: scale(1.1);
+}
