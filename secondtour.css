@@ -62,7 +62,7 @@ body {
   overflow: hidden;
 }
 
-.categorie:hover{
+.categorie:hover {
   transform: scale(1.1);
 }
 
@@ -522,7 +522,7 @@ body {
   border-radius: 100%;
 }
 
-.title-cat{
+.title-cat {
   font-size: 30px;
   color: white;
   font-family: "MarianneTitle";
@@ -530,7 +530,7 @@ body {
   padding-top: 20px;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
@@ -543,7 +543,7 @@ body {
   padding-right: 20px;
   border-radius: 20px;
   border: hidden;
-  font-family: "Marianne";
+  font-family: "MarianneTitle" !important;
   display: block;
   margin: auto;
   transition: transform 0.2s;
@@ -552,4 +552,9 @@ body {
 .french-button:hover {
   background-color: #ed2939;
   transform: scale(1.1);
+}
+
+.filters-text {
+  color: white;
+  padding-bottom: 40px;
 }

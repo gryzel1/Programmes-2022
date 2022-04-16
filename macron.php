@@ -36,6 +36,7 @@
 
             <div class="column">
                 <a href="lepen"><button class="french-button autre-candidat"><img class="autre-candidat-img" src="secondtourassets/lepenPhoto.png" alt="Marine Le Pen"></button></a>
+                <a href="comparateur"><button class="french-button comparateur-button">Comparateur</button></a>
             </div>
 
         </div>
@@ -80,6 +81,7 @@
 
         <div class="filters is-hidden-touch" style="margin-top:20px">
         <h1 class="title-cat">Filtres</h1>
+        <p class="filters-text">Toutes les catégories sont activées au chargement de la page, les mesures qui correspondent sont plus bas. Cliquer sur un bouton désaffiche la catégorie.</p>
 
             <div class="columns">
 
@@ -236,6 +238,7 @@
 
         <div class="filters is-hidden-desktop" style="width: 80%;margin:auto; margin-top: 150px;">
         <h1 class="title-cat">Filtres</h1>
+        <p class="filters-text">Toutes les catégories sont activées au chargement de la page, les mesures qui correspondent sont plus bas. Cliquer sur un bouton désaffiche la catégorie.</p>
 
             <div class="columns is-mobile">
 
@@ -406,8 +409,13 @@
             </div>
 
         </div>
+
+        <br>
+        <a onclick="reverseEverything()"><button class="french-button"><i class="fa fa-refresh" aria-hidden="true"></i>
+                Inverser la sélection</button></a>
+        <br>
         
-        <?php $db= mysqli_connect("localhost","","","secondtour"); if (session_status() == PHP_SESSION_NONE) {session_start();}$db -> set_charset("utf8");
+        <?php $db= mysqli_connect("localhost","root","","secondtour"); if (session_status() == PHP_SESSION_NONE) {session_start();}$db -> set_charset("utf8");
 
             // DÉBUT INTERNATIONAL
             $statement = $db->prepare("SELECT * FROM mesures WHERE candidat LIKE 'macron' AND thematique LIKE 'international'");
@@ -1674,6 +1682,7 @@
             // FIN ENERGIE
         ?>
     </div>
+    <br><br>
 </body>
 
 </html>

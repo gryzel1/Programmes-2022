@@ -1,9 +1,28 @@
+window.onload = function () {
+    //reverseEverything();
+};
+
+function reverseEverything() {
+    selectAdministration();
+    selectCulture();
+    selectEcologie();
+    selectEconomie();
+    selectEducation();
+    selectEnergie();
+    selectInternational();
+    selectJustice();
+    selectLogement();
+    selectSante();
+    selectSecurite();
+    selectSolidarite();
+}
+
 function selectInternational() {
     var div = document.getElementsByClassName("international-columns");
 
     var categories = document.getElementsByClassName("categorie-int");
     var separator = document.getElementsByClassName("separateur-int");
-    
+
     if (categories.item(i).classList.contains("categorie-international-selected")) {
         for (var i = 0; i < categories.length; i++) {
             div.item(i).classList.add("hidden");
@@ -19,7 +38,7 @@ function selectInternational() {
             separator.item(i).classList.add("separateur-selected");
         }
     }
-    
+
 }
 
 function selectSecurite() {
@@ -42,7 +61,7 @@ function selectSecurite() {
             separator.item(i).classList.add("separateur-selected");
         }
     }
-    
+
 }
 
 function selectCulture() {
@@ -65,7 +84,7 @@ function selectCulture() {
             separator.item(i).classList.add("separateur-selected");
         }
     }
-    
+
 }
 
 function selectJustice() {
@@ -88,7 +107,7 @@ function selectJustice() {
             separator.item(i).classList.add("separateur-selected");
         }
     }
-    
+
 }
 
 function selectEconomie() {
@@ -111,7 +130,7 @@ function selectEconomie() {
             separator.item(i).classList.add("separateur-selected");
         }
     }
-    
+
 }
 
 function selectSolidarite() {
@@ -134,7 +153,7 @@ function selectSolidarite() {
             separator.item(i).classList.add("separateur-selected");
         }
     }
-    
+
 }
 
 function selectEcologie() {
@@ -157,7 +176,7 @@ function selectEcologie() {
             separator.item(i).classList.add("separateur-selected");
         }
     }
-    
+
 }
 
 function selectEducation() {
@@ -180,7 +199,7 @@ function selectEducation() {
             separator.item(i).classList.add("separateur-selected");
         }
     }
-    
+
 }
 
 function selectLogement() {
@@ -203,7 +222,7 @@ function selectLogement() {
             separator.item(i).classList.add("separateur-selected");
         }
     }
-    
+
 }
 
 function selectAdministration() {
@@ -226,7 +245,7 @@ function selectAdministration() {
             separator.item(i).classList.add("separateur-selected");
         }
     }
-    
+
 }
 
 function selectAdministration() {
@@ -249,7 +268,7 @@ function selectAdministration() {
             separator.item(i).classList.add("separateur-selected");
         }
     }
-    
+
 }
 
 function selectSante() {
@@ -272,7 +291,7 @@ function selectSante() {
             separator.item(i).classList.add("separateur-selected");
         }
     }
-    
+
 }
 
 function selectEnergie() {
@@ -295,5 +314,5 @@ function selectEnergie() {
             separator.item(i).classList.add("separateur-selected");
         }
     }
-    
+
 }

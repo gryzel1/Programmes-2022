@@ -29,6 +29,7 @@ html {
   margin-top: 12px;
   font-size: 20px;
 }
+
 #nav-flag {
   height: 14px;
   margin-top: 18px;
@@ -137,25 +138,35 @@ html {
   box-shadow: none;
 }
 
-.retour{
+.retour {
   float: right;
   padding: 10px;
-  width:40px;
+  width: 40px;
   height: 40px;
 }
 
-.autre-candidat{
+.autre-candidat {
   float: left;
   padding: 3px;
-  width:40px;
+  width: 40px;
   height: 40px;
   overflow: hidden;
 }
 
-.autre-candidat-img{
+.autre-candidat-img {
   width: 200%;
 }
 
 .is-hidden-desktop .mesure-titre {
   font-size: 12px !important;
+}
+
+.comparateur-button {
+  float: left;
+  padding: 3px;
+  height: 40px;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 10px;
 }
