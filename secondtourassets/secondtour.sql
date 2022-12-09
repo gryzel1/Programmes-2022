@@ -1,0 +1,278 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : localhost
+-- Généré le : ven. 09 déc. 2022 à 15:16
+-- Version du serveur :  10.4.19-MariaDB
+-- Version de PHP : 8.0.6
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données : `secondtour`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `mesures`
+--
+
+CREATE TABLE `mesures` (
+  `id` int(255) NOT NULL,
+  `candidat` varchar(10) NOT NULL,
+  `thematique` varchar(50) NOT NULL,
+  `nom` varchar(50) NOT NULL,
+  `descriptif` varchar(500) NOT NULL,
+  `lien` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `mesures`
+--
+
+INSERT INTO `mesures` (`id`, `candidat`, `thematique`, `nom`, `descriptif`, `lien`) VALUES
+(0, 'lepen', 'international', 'Partenariats stratégiques', 'Définition nette des intérêts de la France et des français. Mettre la realpolitik au dessus des sentiments. Rendre possible le changement de donne au lieu d\'un interventionnisme sentimental ou humanitaire sans perspective politique. Prise en compte systématique des réalités des pays.', NULL),
+(0, 'macron', 'education', 'Les fondamentaux', 'Augmenter les heures de français et de mathématiques en primaire et en 6e et mettre les mathématiques dans le tronc commun du lycée.', NULL),
+(1, 'lepen', 'international', 'Europe', 'Création d\'une Alliance Européenne des Nations qui a vocation à se substituer progressivement à l\'Union Européenne. Une Europe des Nations libres et souveraines assumant son héritage millénaire, celle des coopérations. Fin du super-État fédéraliste chargé d\'idéologie qu\'est l\'UE.', NULL),
+(1, 'macron', 'education', 'Plus de sport', '30 minutes par jour en primaire dès 2022, 2 heures en plus par semaine au collège.', NULL),
+(2, 'lepen', 'international', 'Francophonie', 'Privilégier la francophonie, redevenant un instrument privilégié de notre influence dans le monde, d\'un point de vue culturel, politique et économique. Permettre aux pays francophones d\'Afrique de remplir un rôle moteur dans l\'Union francophone.', NULL),
+(2, 'macron', 'education', 'Contrôle parental', 'Un contrôle parental des écrans des enfants systématiquement proposé à l’installation, afin de limiter leur accès aux réseaux sociaux.', NULL),
+(3, 'lepen', 'international', 'Politique migratoire', 'Permettre au peuple français de retrouver sa souveraineté en décidant par référendum de la politique migratoire qu’il souhaite voir appliquée. Les dispositions proposées par le texte qui sera soumis au référendum respectent pleinement l’État de droit.', NULL),
+(3, 'macron', 'education', 'Délégués de classe', 'Généralisation et renforcement des délégués “non au harcèlement scolaire” au collège et soutien aux plateformes 3018 et 3020.', NULL),
+(4, 'lepen', 'international', 'Assimilation', 'Mettre fin à l’immigration de peuplement et au regroupement familial. Supprimer le droit du sol et limiter l’accès à la nationalité à la seule naturalisation sur des critères de mérite et d’assimilation.', ''),
+(4, 'macron', 'education', 'Situation de handicap', 'Augmentation jusqu’à 35 heures du temps de travail des accompagnants des élèves en situation de handicap pour les revaloriser et mieux aider les enfants.', NULL),
+(5, 'lepen', 'international', 'Droit d\'asile', 'Traiter les demandes de droit d’asile uniquement à l’étranger, de manière à ce que ceux qui voient la leur refusée ne restent pas en France.', ''),
+(5, 'macron', 'education', 'Découverte des métiers', 'Connaître plus tôt pour mieux choisir plus tard: tous les enfants découvriront, de la 5e à la 3e, plusieurs métiers, dont les métiers techniques et manuels.', NULL),
+(6, 'lepen', 'international', 'Autorisation de séjour', 'Supprimer l’autorisation de séjour pour tout étranger n’ayant pas travaillé depuis un an en France.', NULL),
+(6, 'macron', 'education', 'Lycée professionnel', 'Faire du lycée une voie d’excellence, avec la méthode qui a réussi sur l’apprentissage. Les périodes passées en stage en entreprise augmenteront de 50% et les jeunes seront rémunérés.', NULL),
+(7, 'lepen', 'international', 'Priorité nationale', 'Assurer la priorité nationale d’accès au logement social et à l’emploi.', NULL),
+(7, 'macron', 'education', 'Parcoursup', 'Rentre Parcoursup plus prévisible en donnant les résultats précis des années précédentes et en accompagnant mieux les familles.', NULL),
+(8, 'lepen', 'securite', 'Victimes', 'Mettre les victimes au centre de la politique de sécurité et de la politique pénale. Faire bénéficier aux victimes de la réparation, morale et matérielle, qu’elles sont en droit d’attendre. Faire en sorte que les délinquants aient peur des services de sécurité, et craignent la justice.', NULL),
+(8, 'macron', 'education', 'Places dans les filières', 'Ouvrir toutes les places nécessaires dans les filières du supérieur qui correspondent aux besoins de la Nation, à commencer par les BTS, BUT, licences pro, et réguler les filières qui ne mènent pas assez à l’emploi.', NULL),
+(9, 'lepen', 'securite', 'Autorité', 'Restaurer l’autorité des forces de l’ordre et les réarmer moralement. Instituer une présomption de légitime défense pour les forces de l’ordre.', NULL),
+(9, 'macron', 'education', 'Accès à l’école', 'Garantir l’accès à l’école dans les quartiers et la ruralité. Quand c’est nécessaire, renforcement de l’offre éducative après la classe.', NULL),
+(10, 'lepen', 'securite', 'Islamisme', 'Éradiquer les idéologies islamistes et l’ensemble de leurs réseaux du territoire national.', NULL),
+(10, 'macron', 'sante', 'Détections', 'Pour les enfants, une détection précoce des écarts de développement (hyperactivité, dyslexie, obésité…) et un médecin traitant pour chacun.', NULL),
+(11, 'lepen', 'securite', 'Femmes', 'Protéger efficacement les femmes contre toutes les agressions dont elles sont victimes. Des mesures particulières seront prises pour mieux prévenir et réprimer les violences commises à l’encontre des conjoints ou ex-conjoints. Inscription au fichier des délinquants sexuels les harceleurs de rue.', NULL),
+(11, 'macron', 'sante', 'Bilan de santé', 'Aux âges clés (25, 45, 60 ans), un bilan de santé complet et gratuit.', NULL),
+(12, 'lepen', 'securite', 'Service public', 'Sanctionner plus sévèrement les atteintes aux personnes dépositaires de l’autorité publique et aux personnes participant au service public.', NULL),
+(12, 'macron', 'sante', 'Maladies chroniques', 'Pour les patients ayant une maladie chronique, un accompagnement personnalisé et connecté (ex. télésurveillance de la glycémie).\r\n', NULL),
+(13, 'lepen', 'justice', 'Peines plancher', 'Rétablir les peines planchers pour que tout criminel et délinquant aient une sanction.', NULL),
+(13, 'macron', 'sante', 'Femmes', 'Une politique ambitieuse pour la santé des femmes.\r\n', NULL),
+(14, 'lepen', 'securite', 'Renseignements', 'Renforcer l’appareil de renseignement national. Maintenir un niveau élevé d’investissements pour permettre à la France de demeurer parmi les pays les plus performants en matière de renseignement.', NULL),
+(14, 'macron', 'sante', 'Santé mentale', 'Des plans de détection et de prévention relatifs à la santé mentale, à l’infertilité, à la drépanocytose…\r\n', NULL),
+(15, 'lepen', 'securite', 'Défense', 'Porter le budget de la défense à 55 milliards d’euros à l’horizon 2027. Réarmer nos armées pour le combat de haute intensité dans la durée et permettre la souveraineté militaire de la France.', NULL),
+(15, 'macron', 'sante', 'Sauver l’hôpital', 'Un plan de recrutement d’infirmiers et d’aides-soignants.\r\n', NULL),
+(16, 'lepen', 'securite', 'Souveraineté', 'Renforcer notre souveraineté et notre indépendance. Garantir à nos soldats l’équipement et les moyens nécessaires pour garantir et protéger les intérêts nationaux.', NULL),
+(16, 'macron', 'sante', 'Hôpital plus humain', 'Moins de charges administratives pour les soignants, plus de responsabilités pour les paramédicaux et une place centrale des médecins dans la gouvernance.\r\n', NULL),
+(17, 'lepen', 'justice', 'Réductions de peine', 'Supprimer toute possibilité de réduction et d’aménagements de peine, en particulier pour les violences contre les personnes.', NULL),
+(17, 'macron', 'sante', 'Production de médicaments', 'Relocaliser en France la production de médicaments.\r\n', NULL),
+(18, 'lepen', 'justice', 'Mineurs délinquants', 'Les mineurs délinquants doivent être sanctionnés dès le premier fait commis et non après de multiples infractions. La sanction peut être assortie de mesures éducatives, c’est-à-dire d’une prise en charge complétant la sanction afin de faire comprendre aux mineurs concernés qu’il est de leur intérêt de respecter la loi plutôt que de la violer.', NULL),
+(18, 'macron', 'sante', 'Développement', 'Continuer à développer 20 biomédicaments et biotechnologies (notamment contre les cancers), des technologies nouvelles comme les exosquelettes. \r\n', NULL),
+(19, 'lepen', 'justice', 'Effectifs', 'Accélérer les procédures judiciaires en engageant le doublement du nombre de magistrats.', NULL),
+(19, 'macron', 'solidarite', 'Départ à la retraite', 'Relèvement progressif de l’âge légal de départ à la retraite à 65 ans.\r\n', NULL),
+(20, 'lepen', 'justice', 'Prisons', 'Atteindre 85 000 places de prison en 2027.', NULL),
+(20, 'macron', 'solidarite', 'Cumul emploi-retraite', 'Proposer un cumul emploi-retraite plus simple et plus avantageux, pour ceux qui souhaitent travailler plus longtemps et effectuer une transition souple vers la retraite.', NULL),
+(21, 'lepen', 'justice', 'Animaux', 'Renforcer les peines sanctionnant les infractions commises envers les animaux.', NULL),
+(21, 'macron', 'solidarite', 'Volontaires retraités', 'Rémunérer les volontaires proches de la retraite ou à la retraite qui souhaitent faire profiter la société de leur expérience (aide aux devoirs, au montage de projet, transmission des savoir-faire…) en créant un service d’appui de travailleurs seniors.', NULL),
+(22, 'lepen', 'economie', 'Première nécessité', 'Baisser la TVA de 20% à 5.5% sur les produits énergétiques (carburants, fioul, gaz et électricité) en tant que biens de première nécessité.', NULL),
+(22, 'macron', 'solidarite', 'Pension de retraite', 'Augmenter la pension minimale à taux plein à 1100 euros par mois.\r\n', NULL),
+(23, 'lepen', 'economie', 'Hausse des salaires', 'Permettre aux entreprises une hausse des salaires de 10 % (jusqu’à 3 smic) en exonérant cette augmentation de cotisations patronales.', NULL),
+(23, 'macron', 'solidarite', 'Aides à domicile', 'Plus de présence des aides à domicile auprès de nos aînés en instaurant 2 heures de convivialité par semaine pour réduire leur solitude tout en améliorant les conditions de travail des professionnels.', NULL),
+(24, 'lepen', 'economie', 'Autoroutes', 'Renationaliser les autoroutes pour baisser de 15% les péages.', NULL),
+(24, 'macron', 'solidarite', 'Recrutement', 'Recruter 50 000 infirmiers et aides-soignants supplémentaires en EHPAD d’ici 2027.', NULL),
+(25, 'lepen', 'economie', 'Redevance télé', 'Privatiser l’audiovisuel public pour supprimer les 138€ de redevance.', NULL),
+(25, 'macron', 'solidarite', 'Accompagner le deuil', 'Simplification au maximum des démarches pour la famille. Fin de vie plus humaine: lancer une convention citoyenne qui associera citoyens, spécialistes de l’éthique, professionnels.\r\n', NULL),
+(26, 'lepen', 'economie', 'Jeunes actifs', 'Exonérer d’impôt sur le revenu tous les jeunes actifs jusqu’à 30 ans pour qu’ils restent en France et fondent leur famille chez nous.', NULL),
+(26, 'macron', 'solidarite', 'Réduire la pauvreté', 'Versement automatique des aides à ceux qui y ont droit, pour éviter le non-recours et la fraude. Ce sera la solidarité à la source après le prélèvement à la source.\r\n', NULL),
+(27, 'lepen', 'economie', 'Jeunes entrepreneurs', 'Supprimer l’impôt sur les sociétés pour les entrepreneurs de moins de 30 ans pendant les 5 premières années pour éviter leur départ à l’étranger.', NULL),
+(27, 'macron', 'solidarite', 'Impôts en couple', 'Permettre à tous les couples vivant ensemble de réduire leurs impôts comme s’ils étaient mariés ou pacsés.', NULL),
+(28, 'lepen', 'economie', 'Complément de salaire', 'Verser un complément de salaire de 200 à 300€ pour les jeunes qui travaillent durant leurs études et valident leurs examens.', NULL),
+(28, 'macron', 'solidarite', 'Rester chez soi', 'Service de maintien à domicile avec un seul interlocuteur pour l’aidant ou la personne âgée pour organiser tous les services et une “ Prime Adapt’” prenant en charge, selon les ressources, jusqu’à 70% des coûts des travaux d’adaptation.', NULL),
+(29, 'macron', 'solidarite', 'Incapacité', 'Juste prise en compte des cas d’incapacité, des carrières longues et pénibles.\r\n', NULL),
+(30, 'lepen', 'economie', 'Impôts', 'Supprimer l’IFI qui taxe l’enracinement et créer un IFF, impôt sur la fortune financière, pour taxer la spéculation.', NULL),
+(30, 'macron', 'logement', 'Caution publique', 'Étendre la caution publique pour les locataires afin de faciliter l’accès au logement tout en sanctionnant les mauvais payeurs.\r\n', NULL),
+(31, 'lepen', 'economie', 'Patriotisme', 'Mettre en place le patriotisme économique pour réindustrialiser et produire les richesses en France.', NULL),
+(31, 'macron', 'logement', 'Responsabilités', 'Donner la responsabilité en matière de logement, et les financements qui vont avec, aux communes et aux intercommunalités.\r\n', NULL),
+(32, 'lepen', 'economie', 'Marchés publics', 'Donner la priorité aux PME pour les marchés publics.', NULL),
+(32, 'macron', 'logement', 'Couverture numérique', 'Achever la couverture numérique du territoire par la fibre d’ici 2025.\r\n', NULL),
+(33, 'lepen', 'economie', 'Création d’emplois', 'Conditionner les subventions à la création d’emplois au titre d’une politique d’aménagement du territoire.', NULL),
+(33, 'macron', 'administration', 'Numérique', 'Transformer l’État par le numérique: “TousAntiCovid” a montré comment les procédures pouvaient ainsi être simplifiées. 20 000 accompagnateurs pour aider les français à maîtriser les outils numériques.', NULL),
+(34, 'lepen', 'economie', 'Cotisation foncière', 'Supprimer la Cotisation Foncière des Entreprises (CFE) qui pénalise les PME-TPE locales et les impôts de production qui nuisent à la relocalisation.\r\n', NULL),
+(34, 'macron', 'administration', 'Démarches centralisées', 'Un guichet unique pour toutes les démarches et un numéro unique avec une personne au bout du fil. Fonctionnement du type “tapez 1, tapez 2…”.', NULL),
+(35, 'lepen', 'economie', 'Concurrence déloyale', 'Protéger notre économie de la concurrence déloyale et revoir les accords de libre-échange qui ne respectent pas les intérêts de la France.', NULL),
+(35, 'macron', 'administration', 'Préfectures', 'Renforcer le réseau des sous-préfectures à travers la France et continuer le développement des maisons France services.\r\n', NULL),
+(36, 'lepen', 'economie', 'Fonds souverain', 'Créer un “fonds souverain français” pour augmenter la rémunération de l’épargne des Français et l’orienter vers des secteurs stratégiques et l’innovation.', NULL),
+(36, 'macron', 'administration', '“Tiers-lieux”', 'Multiplier les “tiers-lieux”: espaces de travail partagés, de production locale, de recyclage…', NULL),
+(37, 'lepen', 'education', 'Les fondamentaux', 'Reprendre en main le contenu et les modalités des enseignements, et renforcer l’orientation précoce des élèves, pour rétablir l’excellence éducative à la française. Remettre au cœur des programmes l’enseignement du français, des mathématiques et de l’histoire. ', NULL),
+(37, 'macron', 'administration', 'Élus', 'Simplifier le mille-feuille territorial: les élus départementaux seront les mêmes que les élus régionaux, avec un seul “conseiller territorial”. Les compétences seront clarifiées: une mission, un responsable.', NULL),
+(38, 'lepen', 'education', 'Salaires', 'Revaloriser les salaires des enseignants de 3% par an pendant 5 ans, soit 15% sur le quinquennat. Refonder leur formation et leur recrutement, et revaloriser du mérite dans le déroulement des carrières.', NULL),
+(38, 'macron', 'economie', 'RSA conditionné', 'Conditionnement du RSA à une activité effective qui permet l’insertion.', NULL),
+(39, 'lepen', 'education', 'Autorité', 'Rétablir l’autorité de l’institution scolaire par l’instauration d’un uniforme au primaire et au collège tout en sanctionnant les absences et les incivilités.', NULL),
+(39, 'macron', 'economie', 'Assurance chômage', 'Plus stricte quand trop d’emplois sont non pourvus, plus généreuse quand le chômage est élevé.', NULL),
+(40, 'lepen', 'education', 'Bureaucratie', 'Supprimer la bureaucratie de l’Éducation nationale pour libérer des moyens financiers, réduire les effectifs des classes et arrêter les fermetures d’écoles.', NULL),
+(40, 'macron', 'economie', 'Code du travail', 'Poursuivre la modernisation du code du travail engagée avec les ordonnances de 2017.\r\n', NULL),
+(41, 'lepen', 'education', 'Handicap', 'Lancer un grand plan sur l’accès à la scolarité pour les enfants touchés par le handicap.', NULL),
+(41, 'macron', 'economie', 'Redevance', 'Supprimer la “redevance télé” et garantir l’indépendance de l’audiovisuel public.', NULL),
+(42, 'lepen', 'education', 'Chèque formation', 'Créer un chèque-formation mensuel de 200 à 300€ pour les apprentis, les alternants et leurs employeurs.', NULL),
+(42, 'macron', 'economie', 'Successions', 'Transmettre le fruit de son travail: aucun impôt sur les successions jusqu’à 150 000 euros par enfant, aucun impôt jusqu’à 100 000 euros transmis aux autres membres de la famille.', NULL),
+(43, 'lepen', 'education', 'Environnement', 'Développer les formations à l’environnement dès le plus jeune âge. Dès l’école primaire, apprentissage des écosystèmes, des arbres, plantes, animaux et microorganismes qui font la vie.', NULL),
+(43, 'macron', 'economie', 'Primes', 'Tripler la prime dite “Macron”, sans charges ni impôts.', NULL),
+(44, 'lepen', 'solidarite', 'Accès aux aides', 'Réserver les aides sociales aux Français, et conditionner à 5 années de travail en France l’accès aux prestations de solidarité.', NULL),
+(44, 'macron', 'economie', 'Partage des profits', 'Avoir obligatoirement un dispositif de partage des profits (prime “Macron” ou participation ou intéressement) dans les entreprises qui versent des dividendes.', NULL),
+(45, 'lepen', 'solidarite', 'Soutien familial', 'Doubler l’allocation de soutien familial (ASF) pour les parents isolés français. Instituer une part fiscale complète dès le deuxième enfant.', NULL),
+(45, 'macron', 'economie', 'France Travail', 'Pôle emploi transformé en “France Travail” par la mise en commun des forces de l’État, des régions, des départements et des communes.', NULL),
+(46, 'lepen', 'solidarite', 'Prêt à 0%', 'Créer un prêt à 0% pour les jeunes familles françaises transformé en subvention pour les couples qui auront un troisième enfant.', NULL),
+(46, 'macron', 'economie', 'Régimes spéciaux', 'Suppression des principaux régimes spéciaux (EDF, RATP…)  pour les nouveaux entrants, comme fait pour la SNCF.', NULL),
+(47, 'lepen', 'solidarite', 'Héritage et successions', 'Supprimer les impôts sur l’héritage direct pour les familles modestes et les classes moyennes. Exonérer les donations des parents mais aussi des grands-parents à leurs enfants et petits-enfants jusqu’à 100 000€ par enfant tous les dix ans.', NULL),
+(47, 'macron', 'economie', 'Usure professionelle', 'Mobilisation pour prévenir l’usure professionnelle et lutter contre le chômage des seniors.', NULL),
+(48, 'lepen', 'solidarite', 'Âge de départ', 'Refuser tout allongement de l’âge de départ à la retraite. Permettre à ceux qui ont commencé à travailler avant 20 ans pendant 40 annuités de prendre leur retraite à 60 ans.\r\n', NULL),
+(48, 'macron', 'economie', 'Régime universel', 'Poursuite des concertations sur un régime universel plus simple, seulement pour les générations futures, en construisant les compromis nécessaires.', NULL),
+(49, 'lepen', 'solidarite', 'Réindexation des retraites', 'Réindexer les retraites sur l’inflation pour un pouvoir d’achat respectueux d’une vie de travail.', NULL),
+(49, 'macron', 'economie', 'Compte épargne-temps', 'Pouvoir travailler plus à certains moments et moins à d’autres, avec un “compte épargne-temps universel” pour monétiser ses RTT, jours de congés ou bien les mettre de côté et choisir, plus tard dans la vie, d’avoir plus de temps pour soi et ses proches.', NULL),
+(50, 'lepen', 'solidarite', 'Minimum vieillesse', 'Revaloriser le minimum vieillesse à 1 000 € par mois et augmenter les petites retraites.', NULL),
+(50, 'macron', 'economie', 'Garde accessible', 'Pouvoir concilier vie familiale et vie professionnelle, avec la garantie d’une solution de garde accessible pour tout parent d’enfant de moins de trois ans.', NULL),
+(51, 'lepen', 'solidarite', 'Demi-part fiscale', 'Restaurer la demi-part fiscale en faveur des veuves et veufs.', NULL),
+(51, 'macron', 'ecologie', 'Respect des objectifs', 'Faire dépendre obligatoirement la rémunération des dirigeants des grandes entreprises du respect des objectifs environnementaux et sociaux de l’entreprise.', NULL),
+(52, 'lepen', 'solidarite', 'EHPAD', 'Créer un droit opposable aux visites dans les établissements et accroître fortement la présence de personnel médical dans les EHPAD.', NULL),
+(52, 'macron', 'ecologie', 'Impact environnemental', 'Avoir une information claire dès l’achat sur l’impact environnemental des produits courants.', NULL),
+(53, 'lepen', 'solidarite', 'Handicaps', 'Ériger en principe constitutionnel la lutte contre les discriminations du fait du handicap. Déconjugaliser et revaloriser l’Allocation Adulte Handicapée. Appliquer la loi relative à l’accès à tous les lieux et transports publics.', NULL),
+(53, 'macron', 'ecologie', 'Taxe carbone', 'Mise en œuvre d’une taxe carbone aux frontières de l’Europe pour éviter la concurrence déloyale.', NULL),
+(54, 'lepen', 'solidarite', 'Proches aidants', 'Revaloriser et augmenter la durée des aides destinées aux proches aidants.', NULL),
+(54, 'macron', 'ecologie', 'Voitures électriques', 'Une offre abordable de voitures électriques pour tous grâce à une filière 100% française.', NULL),
+(55, 'lepen', 'logement', 'Logements sociaux', 'Construire 100 000 logements sociaux par an dont 20 000 en faveur des étudiants et jeunes travailleurs.', NULL),
+(55, 'macron', 'ecologie', 'Plan territorial', 'Une planification déclinée dans chaque territoire, par les régions, départements, communes, pour des choix locaux sur la production d’énergie et la décarbonation.', NULL),
+(56, 'lepen', 'logement', 'Plan de réhabilitation', '​​Lancer un plan de réhabilitation de l’habitat ancien grâce à des aides efficaces.', NULL),
+(56, 'macron', 'ecologie', 'Plan économique', 'Une planification déclinée dans chaque grand secteur économique, avec une négociation entre tous les acteurs pour déployer les solutions de décarbonation, coordonner les investissements, organiser la transformation des emplois…', NULL),
+(57, 'lepen', 'logement', 'Garantie des loyers', 'Créer un Fonds de Garantie des Loyers pour protéger les propriétaires.', NULL),
+(57, 'macron', 'ecologie', 'Ultramarin', 'Une action renforcée en faveur des territoires ultramarins pour faire face aux catastrophes naturelles et à la pollution environnementale.', NULL),
+(58, 'lepen', 'administration', 'Représentativité', 'Instaurer le Référendum d’Initiative Citoyenne et mettre en place la proportionnelle.', NULL),
+(58, 'macron', 'ecologie', 'Pollution', 'Dépolluer les anciennes décharges et réduire massivement les exportations de déchets, en développant les filières industrielles françaises de recyclage.', NULL),
+(59, 'lepen', 'administration', 'Outre-Mer', 'Créer un grand ministère d’État de la France d’Outre-mer et de la politique maritime, pour restituer tout le respect et la place qu’ils n’auraient jamais dû perdre. Apporter une vision et une visibilité à court, moyen et long termes incarnées par le vote d’une grande loi-programme pour 15 ans.', NULL),
+(59, 'macron', 'ecologie', 'Bois français', 'Planter 140 millions d’arbres d’ici la fin de la décennie, soit 2 arbres par Français et investir dans la filière française du bois.', NULL),
+(60, 'lepen', 'administration', 'Fraudes', 'Créer un ministère de la lutte contre les fraudes (fiscales, aux cotisations et prestations sociales, aux importations, ententes, etc.). Il permettra également de porter les propositions françaises à Bruxelles pour coopérer internationalement en matière de fraude.', NULL),
+(60, 'macron', 'ecologie', 'Biodiversité', 'Protéger toujours mieux nos littoraux, montagnes, forêts et espaces naturels.', NULL),
+(61, 'lepen', 'administration', 'Animaux', 'Accorder une reconnaissance constitutionnelle au statut juridique des animaux, et créer un nouveau statut de droit civil pour les animaux.', NULL),
+(61, 'macron', 'ecologie', 'Animaux', 'Mieux assurer le recueil des animaux de compagnie abandonnés.', NULL),
+(62, 'lepen', 'energie', 'Transition', 'Assurer la transition vers une économie décarbonée autonome en énergie. Relancer la filière nucléaire, hydroélectrique et investir dans la filière hydrogène.', NULL),
+(62, 'macron', 'energie', 'Planification', 'Poursuivre la construction de 6 premières centrales nucléaires nouvelle génération, la multiplication par 10 de notre puissance solaire et l’implantation de 50 parcs éoliens en mer d’ici 2050.', NULL),
+(63, 'lepen', 'energie', 'Subventions', 'Rendre aux ménages les 5 milliards de subventions versées notamment aux éoliennes.', NULL),
+(63, 'macron', 'energie', 'Hydrogène', 'Continuer à investir pour devenir leader de l’hydrogène vert, produire des millions de véhicules électriques et hybrides, et le premier avion bas carbone.', NULL),
+(64, 'lepen', 'energie', 'Éolien', 'Arrêter les projets éoliens et démanteler progressivement les parcs existants.', NULL),
+(64, 'macron', 'education', 'Numérique', 'Généraliser l’enseignement du code informatique et des usages numériques à partir de la 5e.', NULL),
+(65, 'lepen', 'energie', 'Marché européen', 'Sortir du marché européen de l’électricité pour retrouver des prix décents.', NULL),
+(65, 'macron', 'education', 'Métiers d\'avenir', 'Former, avant la fin de la décennie, 1 million de personnes aux métiers d’avenir, dont plus de 400 000 spécialistes informatiques.', NULL),
+(66, 'lepen', 'ecologie', 'Respect des paysans', 'Garantir aux paysans des prix respectueux de leur travail et mettre un terme aux marges abusives de la grande distribution.', NULL),
+(66, 'macron', 'logement', 'Rénovations', '700 000 logements par an rénovés avec des solutions proposées à tous les Français, dont certaines sans aucune avance de frais.', NULL),
+(67, 'lepen', 'ecologie', 'Biodiversité', 'Restaurer la biodiversité, faire renaître la vie. Politique dépendante de l’évolution des populations d’espèces témoin, dans les lieux où ils vivent.', NULL),
+(67, 'macron', 'economie', 'Impôts de production', 'Réduire les impôts de production qui pèsent sur l’industrie et l’agriculture, notamment en supprimant la CVAE pour toutes les entreprises.\r\n', NULL),
+(68, 'lepen', 'ecologie', 'Qualité sanitaire', 'Garantir la qualité sanitaire de l’air et de l’eau. Plan de rénovation du réseau de distribution de l’eau, à la fois pour réduire les pertes en ligne et améliorer la qualité.', NULL),
+(68, 'macron', 'economie', 'Achats de l’État', 'Réviser la politique d’achat de l’État: l’objectif prioritaire sera d’acheter local, plutôt que d’acheter toujours moins cher, pour développer l’innovation et les filières françaises.', NULL),
+(69, 'lepen', 'ecologie', 'Vie des territoires', 'Faire vivre nos territoires. Application du concept de démétropolisation, les Primes à l’Aménagement seront rétablies afin d’inciter entreprises, services et commerces à s’installer dans les zones rurales désertées.', NULL),
+(69, 'macron', 'economie', 'Projets pour l’avenir', 'Continuer à soutenir des projets majeurs pour l’avenir: mini-lanceurs spatiaux, biomédicaments, réacteurs nucléaires de troisième et quatrième générations.', NULL),
+(70, 'macron', 'economie', 'Innovation', 'Un investissement massif dans l’innovation: robotique, numérique, sélection variétale…', NULL),
+(71, 'macron', 'economie', 'Alimentation ultramarine', 'Un plan d’autonomie alimentaire dans chaque territoire ultramarin pour soutenir l’économie locale et lutter contre la vie chère.', NULL),
+(72, 'lepen', 'ecologie', 'Autonomie stratégique', 'Décider des secteurs stratégiques dans lesquels l’autonomie sera assurée en priorité, soit en produisant chez nous soit en diversifiant les fournisseurs. Interdire les importations de produits agricoles ne respectant pas les normes de production française.', NULL),
+(72, 'macron', 'economie', 'Charges', 'Baisser les charges pour les indépendants: le revenu augmentera de 550 euros par an quand on gagne l’équivalent du SMIC.', NULL),
+(73, 'lepen', 'ecologie', 'Cantines', 'Contraindre les cantines à utiliser 80% de produits agricoles français.', NULL),
+(73, 'macron', 'ecologie', 'Orientation et avenir', 'Une loi d’orientation et d’avenir pour assurer le renouvellement des générations, la formation et l’installation des jeunes agriculteurs.', NULL),
+(74, 'lepen', 'ecologie', 'Abattoirs', 'Mettre en place un “plan abattoirs” pour assurer des conditions dignes et interdire l’abattage sans étourdissement.', NULL),
+(74, 'macron', 'international', 'Énergie européenne', 'Assurer l’autonomie énergétique de l’Europe, en accélérant la décarbonation et le déploiement des énergies propres pour réduire sa dépendance au charbon, au gaz, au pétrole importés.', NULL),
+(75, 'lepen', 'ecologie', 'Question animale', 'Rendre la parole aux citoyens sur la question animale, par la création du référendum d’initiative populaire en matière législative.', NULL),
+(75, 'macron', 'international', 'Technologie européenne', 'Assurer l’autonomie technologique de l’Europe, en investissant pour développer ses champions, en se protégeant dans les domaines les plus stratégiques, en se dotant des infrastructures essentielles, comme un « cloud » et une constellation de satellites.', NULL),
+(76, 'lepen', 'ecologie', 'Étiquetage', 'Généraliser l’étiquetage sur l’origine et la qualité des produits alimentaires. Il en va de même pour les biens matériels, dont la durée de vie ou la réparabilité pourra être un critère d’achat. Leur fiscalité pourrait ainsi se retrouver réduite.', NULL),
+(76, 'macron', 'international', 'Stratégie européenne', 'Assurer l’autonomie stratégique de l’Europe, par la définition d’une doctrine commune, un renforcement considérable des capacités des armées européennes et de leur coordination.', NULL),
+(77, 'lepen', 'sante', 'Plan de soutien', 'Lancer un plan de soutien d’urgence pour la santé de 20 milliards d’euros. Redonner confiance à l’hôpital public en lui fournissant les moyens pour être efficace et en réformant sa gouvernance.\r\n', NULL),
+(77, 'macron', 'international', 'Stratégie maritime', 'Une grande stratégie maritime pour notre pays, deuxième puissance du monde en la matière, construite avec tous les acteurs (pêcheur, navigateurs, chercheurs, etc).', NULL),
+(78, 'lepen', 'sante', 'Fermetures des lits', 'Arrêter les fermetures des lits à l’hôpital public et des maternités, en instaurant un moratoire sur la suppression des lits à l’hôpital public.', NULL),
+(78, 'macron', 'international', 'Réforme de Schengen', 'Aller au bout de la réforme de Schengen pour renforcer nos frontières européennes.', NULL),
+(79, 'lepen', 'sante', 'Effectifs', 'Recruter en masse des personnels soignants pour combler les postes vacants et revaloriser leurs salaires. La revalorisation des salaires sera permise par un plan d’investissement de 2 milliards d’euros sur cinq ans, et permettra l’augmentation de 10% des salaires des infirmiers.', NULL),
+(79, 'macron', 'international', 'Force des frontières', 'Créer une “force des frontières” pour renforcer nos frontières nationales.', NULL),
+(80, 'lepen', 'sante', 'Postes administratifs', 'Supprimer les ARS et réduire à 10% les postes administratifs dans les hôpitaux pour libérer des moyens pour les soignants.', NULL),
+(80, 'macron', 'international', 'Droit de séjour', 'Poursuivre la refonte de l’organisation de l’asile et du droit au séjour pour décider beaucoup plus rapidement qui est éligible et expulser plus efficacement ceux qui ne le sont pas.', NULL),
+(81, 'lepen', 'sante', 'Déserts médicaux', 'Agir contre les déserts médicaux grâce à des incitations financières fortes pour les soignants et augmenter le nombre de maisons de santé.', NULL),
+(81, 'macron', 'international', 'Titres de long séjour', 'Titres de long séjour seulement pour ceux qui réussissent un examen de français et s’insèrent professionnellement.', NULL),
+(82, 'lepen', 'sante', 'Autonomie des médecins', 'Rendre aux médecins leur liberté de prescription et d’expression. ', NULL),
+(82, 'macron', 'international', 'Expulsions', 'Expulsion des étrangers qui troublent l’ordre public.', NULL),
+(83, 'lepen', 'sante', 'Investissements', 'Investir dans les technologies de santé et rapatrier la fabrication des médicaments.Réformer le système de rémunération complémentaire des médecins libéraux mis en place en 2012, qui porte atteinte à leur autonomie de décision et n’a pas eu de réel impact sur leurs pratiques professionnelles.', NULL),
+(83, 'macron', 'international', 'Combattants', 'Accueil facilité des combattantes et combattants de la liberté.\r\n', NULL),
+(84, 'lepen', 'sante', 'Aînés', 'Créer des urgences gériatriques dédiées à nos aînés.', NULL),
+(84, 'macron', 'solidarite', 'Discriminations', 'Un “testing” de chaque entreprise de plus de 5 000 salariés: les résultats seront rendus publics, les entreprises coupables poursuivies.', NULL),
+(85, 'lepen', 'sante', 'Prévention', 'Donner plus de place à la prévention, notamment grâce aux visites médicales scolaires qui redeviendront systématiques.', NULL),
+(85, 'macron', 'logement', 'Discriminations', 'Une caution publique élargie pour les locataires qui aidera à lutter contre les discriminations dans le logement.', NULL),
+(86, 'lepen', 'culture', 'Patrimoine', 'Refonte législative pour revenir à l’esprit de la loi de 1913 sur les monuments historiques tout en intégrant des évolutions liées aux défis nouveaux, de façon à mieux protéger nos monuments et faire face aux nouveaux défis de l’urbanisation.', NULL),
+(86, 'macron', 'administration', 'Service national', 'Déployer le service national universel, expérimenté depuis 2017 pour nos jeunes. Pour ceux qui s’y engagent pleinement, le permis de conduire sera financé.', NULL),
+(87, 'lepen', 'culture', 'Projets touristiques', 'Redéfinir l’instance de pilotage public en recréant un grand ministère du tourisme en lien avec celui en charge de l’aménagement du territoire. Mobiliser les services préfectoraux pour monter les dossiers de cofinancement des projets touristiques.', NULL),
+(87, 'macron', 'administration', 'Réserve opérationnelle', 'Pour ceux qui s’engagent dans la durée comme réservistes, les études seront financées à hauteur de 2 500 euros par an pendant 5 ans.', NULL),
+(88, 'lepen', 'culture', 'Accès au tourisme', 'Élargir la demande touristique française en renforçant le développement des “Chèques Vacances” au niveau national comme au niveau régional en la dirigeant vers la consommation touristique de proximité.', NULL),
+(88, 'macron', 'securite', 'Voie publique', 'Achever le doublement de la présence des forces de l’ordre sur la voie publique et le déploiement de 200 nouvelles brigades pour plus de gendarmes en ruralité.', NULL),
+(89, 'lepen', 'justice', 'Courtes peines', 'Revenir à la raison en recourant à de courtes peines d’emprisonnement. Les condamnés à de courtes peines de prison seront incarcérés dans des établissements à niveau de sécurité adapté au profil de ces délinquants.', NULL),
+(89, 'macron', 'securite', 'Transports', 'Mettre en œuvre le doublement de la présence des forces de l’ordre dans les transports aux moments critiques et le triplement de l’amende contre le harcèlement de rue, pour la sécurité des femme.', NULL),
+(90, 'lepen', 'justice', 'Viols', 'Lutter contre la correctionnalisation des viols et poursuivre les crimes commis contre des mineurs selon leur qualification réelle. Abroger la Loi Perben II qui légalise la procédure de correctionalisation et empêche le tribunal correctionnel de qualifier le viol pour ce qu’il est, un crime.', NULL),
+(90, 'macron', 'securite', 'Force d\'action', 'Constituer une Force d’action républicaine pour rétablir en urgence l’ordre dans les quartiers en crise.', NULL),
+(91, 'lepen', 'justice', 'Enfants victimes', 'Faire bénéficier les enfants victimes de l’assistance d’un avocat, pris en charge par la puissance publique. Assister l’enfant victime devant les tribunaux pour les affaires ayant trait à sa situation.', NULL),
+(91, 'macron', 'securite', 'Faciliter le dialogue', 'Faciliter le dialogue entre police, gendarmerie et population sur les priorités de sécurité de proximité, notamment par messageries instantanées.', NULL),
+(92, 'lepen', 'justice', 'Numérique', 'Imposer la collaboration avec les services de police dans les enquêtes sur le harcèlement en ligne, la diffamation ou tout crime et délit. Respecter le droit européen et français en termes de protection des données personnelles. Ne plus imposer de censure sur les contenus en fonction de leurs propres règles.', NULL),
+(92, 'macron', 'securite', 'Islam radical', 'Poursuite de la fermeture des associations et des mosquées radicales, des écoles clandestines, de l’expulsion de prêcheurs radicalisés, du contrôle des financements étrangers.', NULL),
+(93, 'lepen', 'securite', 'Moyens matériels', 'Renforcer les moyens matériels des forces de police, de gendarmerie et de la justice et mieux coordonner l’action de l’État avec celle des maires. Adapter les moyens matériels mis à la disposition de tous les acteurs de la chaîne pénale afin qu’ils puissent consacrer toute leur énergie à assurer la tranquillité et l’ordre public.', NULL),
+(93, 'macron', 'securite', 'Internet', 'Un filtre anti-arnaques avertira en temps réel tous les usagers d’Internet avant qu’ils ne se rendent sur un site potentiellement piégé. Recrutement de 1 500 cyberpatrouilleurs.\r\n', NULL),
+(94, 'lepen', 'securite', 'Attaques informatiques', 'Renforcement des capacités de l’ANSSI, ceux de la DGSE et des capacités militaires dans ce domaine. Création des « commandos numériques » chargés à la fois de réagir à des attaques et de mener des simulations d’offensives numériques pour éprouver la sécurité de nos services.', NULL),
+(94, 'macron', 'securite', 'Numéro joignable', 'Mise en place d’un numéro joignable en permanence pour être conseillé et accompagné.', NULL),
+(95, 'lepen', 'ecologie', 'Mobilité individuelle', 'Assurer le respect du droit à la mobilité individuelle et l’associer au progrès environnemental. Engager un plan national de circulation, de manière à améliorer la complémentarité entre rail, transport aérien et réseau routier.', NULL),
+(95, 'macron', 'justice', 'Privation de droits', 'Une privation de droits civiques pour ceux qui s’en prennent aux dépositaires de l’autorité publique.', NULL),
+(96, 'lepen', 'education', 'Diagnostic', 'Rendre obligatoire le recours à un référentiel informatif nécessaire à établir un diagnostic de la situation que vit un enfant dont on soupçonne qu’il est maltraité ou en danger.', NULL),
+(96, 'macron', 'justice', 'Amendes forfaitaires', 'Pour les délits qui empoisonnent le quotidien, des amendes forfaitaires, plutôt que des procédures longues. Elles pourront être prélevées directement sur les revenus.', NULL),
+(97, 'lepen', 'education', 'Évaluation', 'Constituer, dans chaque département, une équipe chargée de l’évaluation de l’enfant. Permettre à une équipe particulière sans lien avec la famille de procéder à des analyses objectives, afin de proposer des mesures d’aide éducative à domicile, dans des structures spécialisées, voire en proposant de leur retirer leur enfant.', NULL),
+(97, 'macron', 'justice', 'Effectifs', '8 500 magistrats et personnels de justice supplémentaires d’ici 2027.', NULL),
+(98, 'lepen', 'education', 'Enquêtes', 'Mettre à l’abri les enfants durant le temps des enquêtes, car lorsqu’une enquête judiciaire est ouverte, c’est bien que des soupçons graves de maltraitance ont été mis en évidence.', NULL),
+(98, 'macron', 'justice', 'Plainte en ligne', 'La possibilité de déposer plainte en ligne pour de nombreux délits sans plus avoir besoin d’aller au commissariat.', NULL),
+(99, 'lepen', 'education', 'Internet', 'Tenir compte de l’incidence des réseaux sociaux et de l’Internet sur les atteintes portées à l’innocence des enfants. Imposer aux fournisseurs de systèmes d’exploitation et d’accès internet d’intégrer par défaut un contrôle actif des contenus explicites.', NULL),
+(99, 'macron', 'justice', 'Encadrement militaire', 'Pour les mineurs délinquants, la possibilité d’un encadrement par des militaires.', NULL),
+(100, 'lepen', 'sante', 'Soins infantiles', 'Mieux soigner les enfants pris en charge par l’Aide Sociale à l’Enfance. Procéder à des examens complets dès la prise en charge d’un enfant par l’ASE et lui prodiguer, durant toute la période de prise en charge, les soins dont il a besoin.', NULL),
+(100, 'macron', 'securite', 'Dépenses militaires', 'Poursuite de l’objectif de 2% de notre PIB en dépenses militaires.', NULL),
+(101, 'lepen', 'sante', 'Soins psychiatriques', 'Créer dans chaque département un réseau de soins psychiatriques pour les enfants pris en charge par l’Aide Sociale à l’Enfance.', NULL),
+(101, 'macron', 'securite', 'Modernisation', 'D’ici 2030, nos armées entièrement modernisées avec, entre autres, la livraison de plus de 60 chasseurs Rafale supplémentaires, 5 nouveaux sous-marins nucléaires d’attaque, 1 250 nouveaux véhicules blindés polyvalents.', NULL),
+(102, 'lepen', 'sante', 'Soins psychiatriques', 'Créer dans chaque département un réseau de soins psychiatriques pour les enfants pris en charge par l’Aide Sociale à l’Enfance.', NULL),
+(102, 'macron', 'securite', 'Innovations', 'Face aux nouvelles menaces sur tous les terrains, des innovations de rupture : armes électromagnétiques, camouflage optique pour les véhicules de combat, drones sous-marins, missiles hypersoniques, nanosatellites de surveillance spatiale…', NULL),
+(103, 'lepen', 'solidarite', 'Familles d\'accueil', 'Rendre plus attractive la fonction de famille d’accueil. Cela passe par une éventuelle revalorisation de leur rémunération, mais aussi par une simplification des démarches pour la vie quotidienne ou par un ensemble de mesures qu’il conviendra d’identifier, d’évaluer et pour celles qui méritent d’être retenues, de mettre en œuvre.', NULL),
+(103, 'macron', 'securite', 'Réservistes', 'Doublement du nombre de réservistes opérationnels dans nos armées d’ici 2027.', NULL),
+(104, 'lepen', 'solidarite', 'Garde d\'enfant', 'Favoriser le placement chez un membre de la famille autre que les parents. Étudier systématiquement les avantages et les inconvénients d’un placement chez un membre de la famille de l’enfant, et en fonction de l’analyse qui en sera faite de recourir plus largement à cette solution.', NULL),
+(104, 'macron', 'securite', 'Mobilisation civile', 'Un plan de mobilisation civile pour renforcer notre résilience en préparant en profondeur l’État aux crises, en relocalisant les filières essentielles, en renforçant les stocks stratégiques, en recensant les compétences des Français volontaires pour être mobilisés en cas de crise grave et les capacités des entreprises clés.\r\n', NULL),
+(105, 'lepen', 'solidarite', 'Adoption', 'Permettre aux pouvoirs publics de favoriser l’adoption plénière lorsqu’elle est possible, mais tout autant les formules alternatives susceptibles d’apporter une sécurité affective et matérielle à des enfants et à de jeunes adultes.', NULL),
+(105, 'macron', 'securite', 'Systèmes d\'information', 'Une augmentation des moyens de l’Agence nationale de la sécurité des systèmes d’information pour renforcer la capacité de lutte et de soutien cyber aux entreprises françaises.', NULL),
+(106, 'lepen', 'securite', 'Frontières', 'Renforcer la surveillance des frontières par\r\nla Police aux frontières et la Douane. Mieux\r\nsavoir quelles marchandises pénètrent ou quittent le territoire.', NULL),
+(106, 'macron', 'securite', 'Droit à l\'information', 'Le lancement d’États généraux pour le droit à l’information, afin de lutter contre toutes les tentatives d’ingérence et donner aux journalistes le meilleur cadre pour remplir leur mission essentielle, en associant les citoyens.', NULL),
+(107, 'lepen', 'securite', 'Expulsions', 'Expulser les étrangers condamnés, permettant la libération de 25% des places de prison. Expulser les étrangers en situation irrégulière.', NULL),
+(107, 'macron', 'culture', 'Commandes artistiques', 'Des nouvelles commandes publiques artistiques à travers la France pour soutenir les jeunes créateurs.', NULL),
+(108, 'lepen', 'solidarite', 'Transports des jeunes', 'Instituer la gratuité des transports aux heures creuses pour les 18-25 ans plutôt que de faire rouler des trains à moitié vide.', NULL),
+(108, 'macron', 'culture', 'Métavers européens', 'Un investissement pour construire des métavers européens et proposer des expériences en réalité virtuelle, autour de nos musées, de notre patrimoine et de nouvelles créations, en protégeant les droits d’auteur et droits voisins.', NULL),
+(109, 'lepen', 'economie', 'Chèque apprentissage', 'Mise en place d\'un chèque apprentissage bénéficiant aux jeunes et aux entreprises, versé par l\'État et pour tous les 18-25 ans. Il correspondra à 50% de ce que coûterait la formation d\'un jeune s\'il était scolarisé dans une filière générale.', NULL),
+(109, 'macron', 'culture', 'Pass Culture', 'Une extension du pass Culture pour accéder plus jeune à la culture.', NULL),
+(110, 'lepen', 'economie', 'Fraude fiscale', 'Mieux cibler les flux internationaux de marchandises. Faire payer la TVA en temps réel par la banque en procédant à un achat ou à une vente. Supprimer le travail détaché, source de fraude au droit du travail et aux cotisations sociales.', NULL),
+(111, 'lepen', 'economie', 'Droit fiscal', 'Simplifier le droit fiscal et lutter contre les paradis fiscaux au sein de l’Union européenne. Faire en sorte que certains États de l\'Union européenne renoncent à leurs pratiques déloyales.', NULL),
+(112, 'lepen', 'economie', 'Lutte contre la fraude', 'Donner la possibilité aux organismes qui versent des prestations de partager les données qu’ils détiennent et de consulter les fichiers de diverses administrations. Contrôler que les personnes qui perçoivent des prestations sont toujours vivantes.', NULL);
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `mesures`
+--
+ALTER TABLE `mesures`
+  ADD PRIMARY KEY (`id`,`candidat`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
