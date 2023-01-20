@@ -1,0 +1,5 @@
+FROM mysql
+ENV MYSQL_ROOT_PASSWORD 2022prgm
+ENV MYSQL_DATABASE secondtour
+ADD ["secondtourassets/secondtour.sql", "/docker-entrypoint-initdb.d/dump.sql"]
+EXPOSE 3306

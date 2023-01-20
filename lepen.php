@@ -413,7 +413,7 @@
                 Inverser la sélection</button></a>
         <br>
         
-        <?php $db= mysqli_connect("localhost","root","","secondtour"); if (session_status() == PHP_SESSION_NONE) {session_start();}$db -> set_charset("utf8");
+        <?php $db= mysqli_connect("database","root","2022prgm","secondtour");$db -> set_charset("utf8");
 
             // DÉBUT INTERNATIONAL
             $statement = $db->prepare("SELECT * FROM mesures WHERE candidat LIKE 'lepen' AND thematique LIKE 'international'");

@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+
+  web:
+    container_name: web
+    image: 2022-web
+    ports:
+      - 82:80
+    depends_on:
+      - database
+
+  database:
+    container_name: database
+    image: 2022-db
+    volumes:
+      - /var/opt/programmes:/var/lib/mysql
